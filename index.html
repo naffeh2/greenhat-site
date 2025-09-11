@@ -740,6 +740,74 @@ header {
     color: var(--primary-green);
     font-size: 1.3rem;
 }
+.promo-video {
+  width: 100%;
+  background-color: #000; /* خلفية سودة تخلي الفيديو يبرز */
+  margin: 0;
+  padding: 0;
+}
+.promo-video video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* ===== ضبط الفيديو للموبايل ===== */
+@media (max-width: 768px) {
+  .promo-video video {
+    width: 100%;
+    height: auto;
+    max-height: 250px; /* يخلي الفيديو ما يغطي الشاشة بالكامل */
+    object-fit: cover;
+    border-radius: 0;
+  }
+}
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-logo img {
+    width: 220px;
+    margin-top: 0;
+  }
+
+  .hero-text {
+    margin-top: 20px;
+    max-width: 100%;
+  }
+
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+@media (max-width: 576px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .download-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+
 
     </style>
 </head>
@@ -795,7 +863,13 @@ header {
 </div>
     </div>
 </section>
-
+<!-- قسم الفيديو -->
+<section class="promo-video">
+  <video controls autoplay muted loop style="width:100%; height:auto; display:block;">
+    <source src="promo.mp4" type="video/mp4">
+    متصفحك لا يدعم تشغيل الفيديو.
+  </video>
+</section>
     <!-- المنتجات -->
     <section class="products">
         <div class="container">
